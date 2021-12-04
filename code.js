@@ -8,3 +8,11 @@ for (var inputElem of document.querySelectorAll("input, select")) {
         noiseElem.setAttribute("stitchTiles", document.querySelector("#stitchTiles").value);
     });
 }
+
+(
+    async function() {
+        var w = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.width.toString());"))[0]);
+        var h = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.height.toString());"))[0]);
+        document.querySelectorAll("svg").setAttribute("viewBox", `0 0 ${w} ${h}`);
+    }
+)();
