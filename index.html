@@ -5,5 +5,20 @@
     </head>
     <body>
         <script src="code.js"></script>
+        <svg width="1280" height="720">
+  
+            <filter id='noise' x='0%' y='0%' width='100%' height='100%'>
+                <feTurbulence
+                    baseFrequency="0.05 0.05"
+                    type="fractalNoise"
+                    numOctaves="5"
+                    seed="0"
+                    stitchTiles="stitch"
+                />
+            </filter>
+            
+            <rect x="0" y="0" width="100%" height="100%" filter="url(#noise)"></rect>
+              
+        </svg>
     </body>
 </html>
