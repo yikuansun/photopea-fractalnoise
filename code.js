@@ -39,6 +39,6 @@ document.querySelector("button").addEventListener("click", function() {
         return await myPromise;
     }
     rasterize(document.querySelector("svg"), 1, "png").then((x) => {
-        Photopea.runScript(`app.open("${x}", null, true)`);
+        Photopea.runScript(window.parent, `app.open("${x}", null, true)`);
     });
 });
