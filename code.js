@@ -25,8 +25,8 @@ document.querySelector("button").addEventListener("click", function() {
         const myPromise = new Promise((resolve, reject) => {
             imgElem.onload = function() {
                 var svgClientRect = {
-                    width: parseFloat(svgElem.getAttribute("width")),
-                    height: parseFloat(svgElem.getAttribute("height"))
+                    width: parseFloat(svgElem.getAttribute("viewBox").split(" ")[2]),
+                    height: parseFloat(svgElem.getAttribute("viewBox").split(" ")[3])
                 };
                 var canvas = document.createElement("canvas");
                 canvas.width = svgClientRect.width;
