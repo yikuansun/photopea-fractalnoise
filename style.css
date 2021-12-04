@@ -1,0 +1,9 @@
+body {
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input[type="number"] {
+    width: 50px;
+}
