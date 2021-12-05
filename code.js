@@ -9,14 +9,15 @@ for (var inputElem of document.querySelectorAll("input, select")) {
     });
 }
 
-(
+var checkDimensions = (
     async function() {
         var w = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.width.toString());"))[0]);
         var h = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.height.toString());"))[0]);
         document.querySelector("svg").setAttribute("viewBox", `0 0 ${w} ${h}`);
-        if (isNaN(w) || isNaN(h)) location.reload();
+        if (isNaN(w) || isNaN(h)) checkDimensions();
     }
-)();
+);
+checkDimensions();
 
 document.querySelector("button").addEventListener("click", function() {
     async function rasterize(svgElem, quality=1, format="png") {
