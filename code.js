@@ -14,7 +14,7 @@ var checkDimensions = (
         var w = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.width.toString());"))[0]);
         var h = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.height.toString());"))[0]);
         document.querySelector("svg").setAttribute("viewBox", `0 0 ${w} ${h}`);
-        if (isNaN(w) || isNaN(h)) checkDimensions();
+        if (isNaN(w) || isNaN(h)) setTimeout(checkDimensions, 100);
     }
 );
 checkDimensions();
