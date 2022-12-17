@@ -3,8 +3,23 @@ body {
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-y: scroll;
+    text-align: center;
 }
 
 input[type="number"] {
     width: 50px;
+}
+
+#outCan {
+    max-width: 100%;
+    max-height: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+svg {
+    height: 0;
+    width: 0;
+    opacity: 0;
 }
