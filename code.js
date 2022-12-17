@@ -12,7 +12,7 @@ function renderNew() {
     ctx.filter = "url(#noise)";
     ctx.fillRect(0, 0, canv.width, canv.height);
 }
-renderNew();
+window.addEventListener("load", renderNew);
 
 for (var inputElem of document.querySelectorAll("input, select")) {
     inputElem.addEventListener("input", function(e) {
