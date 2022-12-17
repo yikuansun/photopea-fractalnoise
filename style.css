@@ -21,11 +21,15 @@ input, select, button {
 }
 
 input:focus, select:focus, button:focus {
-    border-color: deeppink;
+    border-color: deeppink!important;
 }
 
 button {
     padding: 6px 12px;
+}
+
+button:hover {
+    border-color: whitesmoke;
 }
 
 #outCan {
