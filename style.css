@@ -4,6 +4,7 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-y: scroll;
     text-align: center;
+    user-select: none;
 }
 
 input[type="number"] {
