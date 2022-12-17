@@ -33,6 +33,7 @@ var checkDimensions = (
         var h = parseFloat((await Photopea.runScript(window.parent, "app.echoToOE(app.activeDocument.height.toString());"))[0]);
         document.querySelector("svg").setAttribute("viewBox", `0 0 ${w} ${h}`);
         canv.width = w; canv.height = h;
+        renderNew();
         if (isNaN(w) || isNaN(h)) setTimeout(checkDimensions, 100);
     }
 );
