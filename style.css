@@ -1,6 +1,6 @@
 body {
-    background-color: whitesmoke;
-    color: black;
+    background-color: #242424;
+    color: #EEEEEE;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-y: scroll;
     text-align: center;
@@ -8,6 +8,19 @@ body {
 
 input[type="number"] {
     width: 50px;
+}
+
+input, select, button {
+    background-color: #151515;
+    color: #EEEEEE;
+    border: 2px solid #151515;
+    margin: 1px;
+    outline: none!important;
+    border-radius: 4px;
+}
+
+input:focus, select:focus, button:focus {
+    border-color: deeppink;
 }
 
 #outCan {
