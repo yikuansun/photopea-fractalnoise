@@ -8,3 +8,11 @@ body {
 input[type="number"] {
     width: 50px;
 }
+
+#outCan {
+    max-width: 80%;
+    max-height: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,3 +1,5 @@
+var canv = document.querySelector("#outCan");
+
 for (var inputElem of document.querySelectorAll("input, select")) {
     inputElem.addEventListener("input", function(e) {
         var noiseElem = document.querySelector("feTurbulence");
