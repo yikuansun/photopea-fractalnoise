@@ -11,6 +11,8 @@ function renderNew() {
     ctx.save();
     ctx.filter = "url(#noise)";
     ctx.fillRect(0, 0, canv.width, canv.height);
+    ctx.filter = "url(#noise) opacity(0.77)";
+    ctx.fillRect(0, 0, canv.width, canv.height);
 }
 window.addEventListener("load", renderNew);
 
