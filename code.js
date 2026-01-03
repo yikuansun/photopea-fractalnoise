@@ -41,6 +41,6 @@ var checkDimensions = (
 );
 checkDimensions();
 
-document.querySelector("button").addEventListener("click", function() {
+document.querySelector("#button").addEventListener("click", function() {
     Photopea.runScript(window.parent, `app.open("${canv.toDataURL()}", null, true)`);
 });

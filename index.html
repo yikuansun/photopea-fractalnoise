@@ -3,6 +3,7 @@
     <head>
         <title>Fractal Noise</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./photopea-styles.css" />
     </head>
     <body>
         <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
@@ -21,15 +22,56 @@
             <rect x="0" y="0" width="100%" height="100%" filter="url(#noise)"></rect>
               
         </svg>
-        <canvas id="outCan" width="1280" height="720"></canvas>
-        <br /> <br uh />
-        Base frequency: <input type="number" value="0.01" step="0.001" min="0" id="baseFrequency1" /> * <input type="number" value="0.01" step="0.001" min="0" id="baseFrequency2" /><br />
-        Type: <select id="noiseType"><option value="fractalNoise">Clouds</option><option value="turbulence">Energy</option></select><br />
-        Octaves: <input type="number" value="5" min="1" id="octaves" /><br />
-        Seed: <input type="number" value="1" min="1" id="seed" /><br />
-        Tiling: <select id="stitchTiles"><option value="stitch">Stitch</option><option value="noStitch">Don't Stitch</option></select><br />
-        <br uh />
-        <button>Add to document</button>
+        <div style="display: flex; flex-direction: column; gap: 8px;
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            box-sizing: border-box; padding: 8px;">
+            <canvas id="outCan" width="1280" height="720"></canvas>
+            <table id="controls">
+                <colgroup>
+                    <col style="text-align: left;" />
+                    <col style="text-align: right;" />
+                </colgroup>
+                <tr>
+                    <td>Base Frequency</td>
+                    <td>
+                        <input type="number" value="0.01" step="0.001" min="0" id="baseFrequency1" /> &#215; <input type="number" value="0.01" step="0.001" min="0" id="baseFrequency2" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>
+                        <select id="noiseType">
+                            <option value="fractalNoise">Clouds</option>
+                            <option value="turbulence">Energy</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Octaves</td>
+                    <td>
+                        <input type="number" value="5" min="1" max="12" id="octaves" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seed</td>
+                    <td>
+                        <input type="number" value="1" min="1" id="seed" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tiling</td>
+                    <td>
+                        <select id="stitchTiles">
+                            <option value="stitch">Stitch</option>
+                            <option value="noStitch">Don't Stitch</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div style="text-align: center;">
+                <a id="button">Add to document</a>
+            </div>
+        </div>
         <script src="photopea.min.js"></script>
         <script src="code.js"></script>
     </body>

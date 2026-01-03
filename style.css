@@ -1,44 +1,37 @@
 body {
-    background-color: #242424;
-    color: #EEEEEE;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    overflow-y: scroll;
-    text-align: center;
     user-select: none;
 }
 
 input[type="number"] {
-    width: 50px;
-}
-
-input, select, button {
-    background-color: #151515;
-    color: #EEEEEE;
-    border: 2px solid #151515;
-    margin: 1px;
-    outline: none!important;
-    border-radius: 4px;
-}
-
-input:focus, select:focus, button:focus {
-    border-color: deeppink!important;
-}
-
-button {
-    padding: 6px 12px;
-}
-
-button:hover {
-    border-color: whitesmoke;
+    width: 64px;
+    vertical-align: middle;
 }
 
 #outCan {
-    max-width: 100%;
-    max-height: 50vh;
+    width: 100%;
+    min-height: 0;
+    flex-grow: 2;
+    object-fit: contain;
 }
 
 svg {
     height: 0;
     width: 0;
     opacity: 0;
+}
+
+#controls {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#controls tr td:last-child {
+    text-align: right;
+}
+
+#button {
+    position: relative;
 }
